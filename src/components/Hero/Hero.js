@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents'
 import Button from '../../styles/GlobalComponents/Button'
-import { LeftSection } from './HeroStyles'
+import { LeftSection, ButtonDiv,ButtonLink } from './HeroStyles'
 
 const Hero = (props) => (
   <>
@@ -12,11 +12,13 @@ const Hero = (props) => (
           Wyn Anderson <br />
         </SectionTitle>
         <SectionText>
-          I currently work as a Program Manager overseeing the manufacturing and development of
-          electric motors for aerospace applications. I have years of experience spread across the different programming
-           languages used in aerospace engineering.
+          Software engineer currently working as a Program Manager overseeing the development of
+          electric motor avionics (C/C++) for aerospace applications.
         </SectionText>
-        <Button onClick={props.handleClick}>Contact me</Button>
+        <ButtonDiv>
+          <ButtonLink onClick={props.handleClick}>Resume</ButtonLink>
+          <ButtonLink onClick={props.handleClick}>GitHub</ButtonLink>
+        </ButtonDiv>
       </LeftSection>
     </Section>
   </>

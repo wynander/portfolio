@@ -26,14 +26,16 @@ export const Section = styled.section`
 
 export const SectionTitle = styled.h2`
   font-weight: 800;
-  font-size: ${(props) => props.main ? '65px' : '56px'};
+  font-size: ${(props) => props.main ? '56px' : '56px'};
   line-height: ${(props) => props.main ? '72px' : '56px'};
   width: max-content;
   max-width: 100%;
-  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+  height: max-content;
+  
+  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 1) 60.15%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   padding: ${(props) => props.main ? '58px 0 16px' : '0'};
 
   @media ${props => props.theme.breakpoints.md}{
@@ -209,7 +211,7 @@ export const ButtonFront = styled.button`
   left: 0;
   width: 100%;
   height: 100%;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+  background: '#fff'
   opacity: ${({ disabled }) => disabled ? '.5' : '1'};
   transition: .4s ease;
   font-size: ${({ alt }) => alt ? '20px' : '24px'};
