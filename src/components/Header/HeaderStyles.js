@@ -36,8 +36,12 @@ export const Div2 = styled.div`
   align-items: center;
   
   @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 1 / 2 / 5;
+    grid-area: 2 / 1 / 2 / 6;
+    justify-content: center;
   }
+
+  
+
 `
 export const Div3 = styled.div`
   grid-area: 1 / 5 / 2 / 6;
@@ -65,6 +69,13 @@ export const NavLink = styled.a`
   }
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
+    outline: 1px solid #202020;
+    border-radius: 5px;
+    background-color: #202020;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 4vw;
   }
 `
 

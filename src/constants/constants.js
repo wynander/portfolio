@@ -1,15 +1,28 @@
 export const projects = [
   {
     title: 'Homebase',
-    description:
-      "",
-    image: '/images/1.png',
+    description: '',
     tags: ['Mongo', 'Express', 'React', 'Node'],
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 0,
-    type:'webapp',
+    type: 'webapp',
     importance: 'high',
+    assets: [
+      {
+        source: '/homebase/HOMEBASE_Hex.png',
+        description: 'Hexagonal grid showing average house prices and housing appreciation  trends',
+      },
+      {
+        source: '/homebase/HOMEBASE_HexFilter.png',
+        description: 'Filter the data for whats important to you',
+      },
+      
+      {
+        source: '/homebase/HOMEBASE_BoundaryCAZoomed.png',
+        description: 'View detailed city boundaries across the country',
+      },
+    ],
   },
   {
     title: 'E-Commerce',
@@ -20,7 +33,19 @@ export const projects = [
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 1,
-    type:'webapp'
+    type: 'webapp',
+    assets: [
+      {
+        source:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_Homepage.svg/800px-Google_Homepage.svg.png',
+        description: 'ff',
+      },
+      {
+        source:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_Homepage.svg/800px-Google_Homepage.svg.png',
+        description: 'ff',
+      },
+    ],
   },
   {
     title: 'WebRTC App',
@@ -31,7 +56,19 @@ export const projects = [
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 2,
-    type:'matlab'
+    type: 'matlab',
+    assets: [
+      {
+        source:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_Homepage.svg/800px-Google_Homepage.svg.png',
+        description: 'ff',
+      },
+      {
+        source:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_Homepage.svg/800px-Google_Homepage.svg.png',
+        description: 'ff',
+      },
+    ],
   },
 ]
 

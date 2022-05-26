@@ -1,7 +1,8 @@
 import React from 'react'
+import {RightSection } from '../Hero/HeroStyles'
 
 const BackgroundAnimation = () => (
-  <div>
+  <RightSection hideSmall>
     <svg
       className='BgAnimation__svg'
       viewBox='0 0 602 602'
@@ -309,7 +310,7 @@ const BackgroundAnimation = () => (
         </linearGradient>
       </defs>
     </svg>
-  </div>
+  </RightSection>
 )
 
 export default BackgroundAnimation

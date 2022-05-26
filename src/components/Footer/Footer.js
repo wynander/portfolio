@@ -22,16 +22,14 @@ const Footer = () => {
           <LinkItem href='mailto:wynanderson77@gmail.com'>wynanderson77@gmail.com</LinkItem>
         </LinkColumn>
 
-        
-          <SocialContainer>
-            <SocialIcons href='https://github.com/wynander'>
-              <AiFillGithub size='3rem' />
-            </SocialIcons>
-            <SocialIcons href='https://www.linkedin.com/in/wyn-anderson/'>
-              <AiFillLinkedin size='3rem' />
-            </SocialIcons>
-          </SocialContainer>
-        
+        <SocialContainer>
+          <SocialIcons href='https://github.com/wynander'>
+            <AiFillGithub size='3rem' />
+          </SocialIcons>
+          <SocialIcons href='https://www.linkedin.com/in/wyn-anderson/'>
+            <AiFillLinkedin size='3rem' />
+          </SocialIcons>
+        </SocialContainer>
       </LinkList>
     </FooterWrapper>
   )

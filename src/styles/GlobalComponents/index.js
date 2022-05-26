@@ -1,12 +1,38 @@
 import styled from 'styled-components'
 
+
+export const HeroSection = styled.section`
+  display: flex;
+  padding: ${(props) => (props.nopadding ? '32px' : '32px 48px 16px 48px')};
+  height: calc(100vh - 76px);
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding: 24px 48px 0;
+    flex-direction: column;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: ${(props) => (props.nopadding ? '0' : '16px 16px 0')};
+    height:auto;
+    width: calc(100vw - 32px);
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+`
+
 export const Section = styled.section`
   display: ${(props) => props.grid ? "grid" : "flex" };
   flex-direction: ${(props) => props.row ? "row" : "column" };
-  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
+  padding: ${(props) => props.nopadding ? "32px" : "32px 48px 32px" } ;
   margin: 0 auto;
-  max-width: 1200px;
-  box-sizing: content-box;
+  max-width: 1250px;
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
@@ -36,7 +62,7 @@ export const SectionTitle = styled.h2`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
-  padding: ${(props) => props.main ? '58px 0 16px' : '0'};
+  padding: ${(props) => props.main ? '20px 0 16px' : '0'};
 
   @media ${props => props.theme.breakpoints.md}{
     font-size: ${(props) => props.main ? '56px' : '48px'};
@@ -88,7 +114,7 @@ export const SectionDivider = styled.div`
     'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
     'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
 
-    margin: ${(props) => props.divider ? "4rem 0" : "" };
+  
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: 48px;

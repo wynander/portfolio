@@ -26,7 +26,11 @@ export const BlogCard = styled.div`
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
   text-align: center;
-  width: 550px;
+  max-width: 550px;
+  min-width: 100%;
+  min-height: 100%;
+  display:flex;
+  flex-direction: column;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
@@ -73,6 +77,7 @@ export const CardInfo = styled.p`
   font-style: 2rem;
   line-height: 24px;
   text-align: justify;
+  flex:1;
   @media ${(props) => props.theme.breakpoints.sm} {
     padding:.3rem
   
