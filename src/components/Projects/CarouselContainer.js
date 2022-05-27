@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs'
+import { Img } from './ProjectsStyles'
+import useWindowDimensions from './useWindowDimensions'
 
-function CarouselContainer({ assets }) {
+function CarouselContainer({ legend,assets, setOpen, index, setIndex, height,open }) {
   const arrowStyles = {
     position: 'absolute',
     display: 'flex',
@@ -31,13 +33,26 @@ function CarouselContainer({ assets }) {
     transform: 'translateX(-50%)',
     fontFamily: 'Space Grotesk, sans-serif',
   }
+  const dims = useWindowDimensions()
+  
+  useEffect(() => {
+    if(dims.width <= 960 && open){
+      setOpen(false)
+    }
+  }, [dims, open, setOpen])
 
-  const handleClickItem = (i, item) => {}
+  const handleClickItem = (i, item) => {
+    if (dims.width > 960) {
+      setOpen(true)
+    }
+  }
 
   return (
     <>
       <Carousel
-        onClickItem={(i, item) => console.log(i, item, assets)}
+        selectedItem={index}
+        onClickItem={(i, item) => handleClickItem(i, item)}
+        onChange={(i) => setIndex(i)}
         showThumbs={false}
         showStatus={false}
         renderArrowPrev={(onClickHandler, hasPrev, label) =>
@@ -68,11 +83,11 @@ function CarouselContainer({ assets }) {
         {assets?.map((a, i) => {
           return (
             <div key={i}>
-              <img src={a.source} />
+              <Img src={a.source} height={height} />
 
-              {/* <p className='legend' style={{ ...legendStyles }}>
+             {legend && <p className='legend' style={{ ...legendStyles }}>
                 {a.description}
-              </p> */}
+              </p>}
             </div>
           )
         })}

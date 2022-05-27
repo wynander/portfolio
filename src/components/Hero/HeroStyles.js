@@ -1,21 +1,31 @@
 import styled from 'styled-components'
 
 export const LeftSection = styled.div`
-  width: 100%;
+  max-width: 55%;
+
+  position: absolute;
   display: flex;
   flex-direction: column;
   margin-botton: 2rem;
-  flex: 1;
   height: min-content;
   justify-content: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
+  z-index: 1;
+  @media ${(props) => {
+      props.theme.breakpoints.sm
+    }} {
     width: 80%;
     display: flex;
     flex-direction: column;
 
     margin: 0 auto;
   }
+  @media screen and (max-width: 960px) {
+    max-width: 100%;
+    margin: 0 auto;
+  }
   @media ${(props) => props.theme.breakpoints.md} {
+    position: relative;
+    max-width: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -24,45 +34,37 @@ export const LeftSection = styled.div`
   }
 `
 export const RightSection = styled.div`
-  width: 100%;
+  width: 1000px;
   margin-botton: 2rem;
-  flex:1;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-
-    margin: 0 auto;
-  }
+  position: absolute;
+  left: 400px;
+  
   @media ${(props) => props.theme.breakpoints.md} {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    left: 0;
     display: ${(props) => (props.hideSmall ? 'none' : '')};
-    margin: 0 auto;
   }
 `
 
 export const ButtonDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  max-width: 50%;
+  @media ${(props) => props.theme.breakpoints.md} {
 `
 
 export const ButtonLink = styled.a`
   border: none;
   border-radius: 50px;
-  color: #fff;
+  color: ${(props) => props.theme.colors.button.text};
   display: flex;
   top: 0;
   left: 0;
-  width: 40%;
-  padding: 10px;
-  background: ${({ alt }) =>
-    alt
-      ? '#202020'
-      : '#202020'};
+  padding: 10px 20px;
+  margin: 0 1rem;
+  background-color: ${(props) => props.theme.colors.button.bg};
   opacity: ${({ disabled }) => (disabled ? '.5' : '1')};
   transition: 0.4s ease;
   font-size: ${({ alt }) => (alt ? '20px' : '24px')};
@@ -76,7 +78,7 @@ export const ButtonLink = styled.a`
       : 'none'};
 
   &:hover {
-    background-color: #252525
+    background-color: #252525;
   }
   &:focus {
     outline: none;
@@ -98,7 +100,6 @@ export const ButtonLink = styled.a`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 16px;
-    width: 30%;
   }
 `
 

@@ -11,7 +11,7 @@ const Hero = (props) => (
           Wyn Anderson <br />
         </SectionTitle>
         <SectionText>
-          Software engineer currently operating as a Program Manager responsible for the development
+          Front-end oriented software engineer currently overseeing the development
           of electric motor avionics (C/C++) for aerospace applications.
         </SectionText>
         <ButtonDiv>
