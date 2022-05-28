@@ -21,8 +21,10 @@ const Hero = (props) => (
           applications.
         </SectionText>
         <ButtonDiv>
-          <ButtonLink onClick={props.handleClick}>Resume</ButtonLink>
-          <ButtonLink onClick={props.handleClick}>GitHub</ButtonLink>
+          <ButtonLink href="/resume">Resume</ButtonLink>
+          <ButtonLink href="https://github.com/wynander">
+            GitHub
+          </ButtonLink>
         </ButtonDiv>
       </LeftSection>
       <BgAnimation />
