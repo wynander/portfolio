@@ -19,7 +19,7 @@ export function ItemBlogCard({ i, setOpen, item, index, setIndex }) {
   return (
     <BlogCard key={i}>
       <TitleContent>
-        <HeaderThree title='true'>{item.title}</HeaderThree>{' '}
+        <HeaderThree title="true">{item.title}</HeaderThree>{' '}
       </TitleContent>
 
       <CarouselContainer
@@ -27,7 +27,7 @@ export function ItemBlogCard({ i, setOpen, item, index, setIndex }) {
         setOpen={setOpen}
         index={index}
         setIndex={setIndex}
-        height='300px'
+        height="300px"
       />
       <TitleContent>
         <HeaderThree>{item.subtitle}</HeaderThree>
@@ -37,12 +37,12 @@ export function ItemBlogCard({ i, setOpen, item, index, setIndex }) {
           })}
         </TagList>
       </TitleContent>
-      <CardInfo className='card-info'>{item.description}</CardInfo>
-      
+      <CardInfo className="card-info">{item.description}</CardInfo>
+
       <UtilityList>
         <Tooltip>
           <ExternalLinks href={item.source}>
-            <VscSourceControl size='2rem' />
+            <VscSourceControl size="2rem" />
           </ExternalLinks>
           <TooltipBox>View Source Code</TooltipBox>
         </Tooltip>
@@ -50,7 +50,7 @@ export function ItemBlogCard({ i, setOpen, item, index, setIndex }) {
           {item.type === 'webapp' ? (
             <>
               <ExternalLinks href={item.visit}>
-                <MdWeb size='2rem' />
+                <MdWeb size="2rem" />
               </ExternalLinks>
               <TooltipBox>Visit Site</TooltipBox>
             </>

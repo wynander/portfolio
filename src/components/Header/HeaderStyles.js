@@ -139,7 +139,7 @@ export const Logo = styled.a`
   align-items: center;
   fill: ${(props) => props.theme.colors.text};
   font-size: 2rem;
-  cursor:pointer;
+  cursor: pointer;
 `
 
 export const SocialIcons = styled.a`
@@ -203,7 +203,8 @@ export const Tooltip = styled.div`
     width: max-content;
     padding: 8px 8px;
     &:before {
-      border-color: transparent transparent rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
+      border-color: transparent transparent rgba(0, 0, 0, 0.8)
+        rgba(0, 0, 0, 0.8);
     }
   }
 `

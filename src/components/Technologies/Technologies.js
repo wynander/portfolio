@@ -1,19 +1,32 @@
 import React from 'react'
 import { DiFirebase, DiReact, DiZend } from 'react-icons/di'
 import { useThemeContext } from 'src/styles/theme'
-import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents'
-import { Icon, List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles'
+import {
+  Section,
+  SectionDivider,
+  SectionText,
+  SectionTitle,
+} from '../../styles/GlobalComponents'
+import {
+  Icon,
+  List,
+  ListContainer,
+  ListItem,
+  ListParagraph,
+  ListTitle,
+} from './TechnologiesStyles'
 import { SiFigma } from 'react-icons/si'
 const Technologies = () => {
   const { theme } = useThemeContext()
   return (
-    <Section id='tech' nopadding>
+    <Section id="tech" nopadding>
       <SectionDivider divider />
       <SectionTitle main>Technologies I Use</SectionTitle>
-      <SectionText>I&apos;ve been working with the following technologies:</SectionText>
+      <SectionText>
+        I&apos;ve been working with the following technologies:
+      </SectionText>
       <List>
         <ListItem>
-          
           <ListContainer>
             <ListTitle>Front-End</ListTitle>
             <ListParagraph>
@@ -32,7 +45,6 @@ const Technologies = () => {
           </ListContainer>
         </ListItem>
         <ListItem>
-          
           <ListContainer>
             <ListTitle>Back-End</ListTitle>
             <ListParagraph>
@@ -43,7 +55,6 @@ const Technologies = () => {
           </ListContainer>
         </ListItem>
         <ListItem>
-          
           <ListContainer>
             <ListTitle>UI/UX</ListTitle>
             <ListParagraph>

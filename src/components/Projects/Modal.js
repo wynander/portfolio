@@ -5,19 +5,22 @@ import { useThemeContext } from 'src/styles/theme'
 
 export default function Modal({ key, open, setOpen, children }) {
   const { theme } = useThemeContext()
-  console.log(theme)
   return (
     <>
       {open && (
-        <ClientOnlyPortal selector='#modal' key={key}>
-          <div className='backdrop'>
-            <div className='modal'>
+        <ClientOnlyPortal selector="#modal" key={key}>
+          <div className="backdrop">
+            <div className="modal">
               {children}
-              <button className='close-button' type='button' onClick={() => setOpen(false)}>
+              <button
+                className="close-button"
+                type="button"
+                onClick={() => setOpen(false)}
+              >
                 <IoClose />
               </button>
             </div>
-            <div className='backdrop-exit' onClick={() => setOpen(false)} />
+            <div className="backdrop-exit" onClick={() => setOpen(false)} />
             <style jsx>{`
               .backdrop {
                 position: fixed;
@@ -34,7 +37,9 @@ export default function Modal({ key, open, setOpen, children }) {
 
               .backdrop-exit {
                 position: absolute;
-                background-color: ${theme ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0.3)'};
+                background-color: ${theme
+                  ? 'rgba(0, 0, 0, 0.1)'
+                  : 'rgba(0, 0, 0, 0.3)'};
                 top: 0;
                 right: 0;
                 bottom: 0;

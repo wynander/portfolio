@@ -8,9 +8,20 @@ export default function Item({ item }) {
 
   return (
     <>
-      <ItemBlogCard setOpen={setOpen} item={item} index={index} setIndex={setIndex} />
+      <ItemBlogCard
+        setOpen={setOpen}
+        item={item}
+        index={index}
+        setIndex={setIndex}
+      />
       <Modal open={open} setOpen={setOpen}>
-        <ModalCard open={open} setOpen={setOpen} item={item} index={index} setIndex={setIndex} />
+        <ModalCard
+          open={open}
+          setOpen={setOpen}
+          item={item}
+          index={index}
+          setIndex={setIndex}
+        />
       </Modal>
     </>
   )

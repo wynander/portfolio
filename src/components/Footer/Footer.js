@@ -19,15 +19,17 @@ const Footer = () => {
       <LinkList>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
-          <LinkItem href='mailto:wynanderson77@gmail.com'>wynanderson77@gmail.com</LinkItem>
+          <LinkItem href="mailto:wynanderson77@gmail.com">
+            wynanderson77@gmail.com
+          </LinkItem>
         </LinkColumn>
 
         <SocialContainer>
-          <SocialIcons href='https://github.com/wynander'>
-            <AiFillGithub size='3rem' />
+          <SocialIcons href="https://github.com/wynander">
+            <AiFillGithub size="3rem" />
           </SocialIcons>
-          <SocialIcons href='https://www.linkedin.com/in/wyn-anderson/'>
-            <AiFillLinkedin size='3rem' />
+          <SocialIcons href="https://www.linkedin.com/in/wyn-anderson/">
+            <AiFillLinkedin size="3rem" />
           </SocialIcons>
         </SocialContainer>
       </LinkList>

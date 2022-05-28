@@ -1,7 +1,12 @@
 import React from 'react'
 import BgAnimation from '/src/components/BackgroundAnimation/BackgroundAnimation'
-import { Section, SectionText, SectionTitle, HeroSection } from '../../styles/GlobalComponents'
-import { LeftSection, ButtonDiv,ButtonLink } from './HeroStyles'
+import {
+  Section,
+  SectionText,
+  SectionTitle,
+  HeroSection,
+} from '../../styles/GlobalComponents'
+import { LeftSection, ButtonDiv, ButtonLink } from './HeroStyles'
 
 const Hero = (props) => (
   <>
@@ -11,8 +16,9 @@ const Hero = (props) => (
           Wyn Anderson <br />
         </SectionTitle>
         <SectionText>
-          Front-end oriented software engineer currently overseeing the development
-          of electric motor avionics (C/C++) for aerospace applications.
+          Front-end oriented software engineer currently overseeing the
+          development of electric motor avionics (C/C++) for aerospace
+          applications.
         </SectionText>
         <ButtonDiv>
           <ButtonLink onClick={props.handleClick}>Resume</ButtonLink>

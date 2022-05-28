@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 
-
-
 export default function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState({width: 1920, height: 1080})
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: 1920,
+    height: 1080,
+  })
 
   useEffect(() => {
     function handleResize() {

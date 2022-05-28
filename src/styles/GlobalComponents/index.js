@@ -85,7 +85,7 @@ export const SectionText = styled.p`
   line-height: 40px;
   font-weight: 300;
   padding-bottom: 3.6rem;
-  color: ${props => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 670px;
@@ -167,7 +167,8 @@ export const SecondaryBtn = styled.button`
   &:active {
     background: #e0e4eb;
     border: 1px solid #304169;
-    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
+    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15),
+      inset 0px 0px 4px rgba(20, 20, 55, 0.3);
   }
 
   @media ${(props) => props.theme.breakpoints.md} {

@@ -5,7 +5,15 @@ import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs'
 import { Img } from './ProjectsStyles'
 import useWindowDimensions from './useWindowDimensions'
 
-function CarouselContainer({ legend, assets, setOpen, index, setIndex, height, open }) {
+function CarouselContainer({
+  legend,
+  assets,
+  setOpen,
+  index,
+  setIndex,
+  height,
+  open,
+}) {
   const arrowStyles = {
     position: 'absolute',
     display: 'flex',
@@ -58,13 +66,13 @@ function CarouselContainer({ legend, assets, setOpen, index, setIndex, height, o
         renderArrowPrev={(onClickHandler, hasPrev, label) =>
           hasPrev && (
             <button
-              type='button'
+              type="button"
               onClick={onClickHandler}
               title={label}
               style={{ ...arrowStyles, left: 0 }}
             >
-              <div className='arrow-container'>
-                <BsFillCaretLeftFill size='24px' />
+              <div className="arrow-container">
+                <BsFillCaretLeftFill size="24px" />
               </div>
             </button>
           )
@@ -72,13 +80,13 @@ function CarouselContainer({ legend, assets, setOpen, index, setIndex, height, o
         renderArrowNext={(onClickHandler, hasNext, label) =>
           hasNext && (
             <button
-              type='button'
+              type="button"
               onClick={onClickHandler}
               title={label}
               style={{ ...arrowStyles, right: 0 }}
             >
-              <div className='arrow-container'>
-                <BsFillCaretRightFill size='24px' />
+              <div className="arrow-container">
+                <BsFillCaretRightFill size="24px" />
               </div>
             </button>
           )
@@ -90,7 +98,7 @@ function CarouselContainer({ legend, assets, setOpen, index, setIndex, height, o
               <Img src={a.source} height={height} alt={a.description} />
 
               {legend && (
-                <p className='legend' style={{ ...legendStyles }}>
+                <p className="legend" style={{ ...legendStyles }}>
                   {a.description}
                 </p>
               )}

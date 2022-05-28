@@ -13,7 +13,7 @@ import {
   UtilityList,
   Legend,
   Tooltip,
-    TooltipBox,
+  TooltipBox,
 } from './ProjectsStyles'
 import { VscSourceControl } from 'react-icons/vsc'
 import { MdWeb } from 'react-icons/md'
@@ -27,13 +27,13 @@ function ModalCard({ item, open, setOpen, index, setIndex }) {
         setOpen={setOpen}
         index={index}
         setIndex={setIndex}
-        height='auto'
+        height="auto"
       />
       <Legend>{item.assets[index].description}</Legend>
       <UtilityList>
         <Tooltip>
           <ExternalLinks href={item.source}>
-            <VscSourceControl size='2rem' />
+            <VscSourceControl size="2rem" />
           </ExternalLinks>
           <TooltipBox>View Source Code</TooltipBox>
         </Tooltip>
@@ -41,7 +41,7 @@ function ModalCard({ item, open, setOpen, index, setIndex }) {
           {item.type === 'webapp' ? (
             <>
               <ExternalLinks href={item.visit}>
-                <MdWeb size='2rem' />
+                <MdWeb size="2rem" />
               </ExternalLinks>
               <TooltipBox>Visit Site</TooltipBox>
             </>

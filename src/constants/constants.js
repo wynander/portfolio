@@ -16,7 +16,8 @@ export const projects = [
       },
       {
         source: '/homebase/HOMEBASE_Hex.png',
-        description: 'Hexagonal grid showing average house prices and housing appreciation  trends',
+        description:
+          'Hexagonal grid showing average house prices and housing appreciation  trends',
       },
       {
         source: '/homebase/HOMEBASE_HexFilter.png',

@@ -33,7 +33,7 @@ export const GridContainer = styled.section`
 `
 export const BlogCard = styled.div`
   border-radius: 10px;
-  background-color: ${props => props.theme.colors.secondary};
+  background-color: ${(props) => props.theme.colors.secondary};
   text-align: center;
   max-width: 550px;
   min-width: 100%;
@@ -164,7 +164,8 @@ export const Tooltip = styled.div`
     width: max-content;
     padding: 8px 8px;
     &:before {
-      border-color: transparent transparent rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
+      border-color: transparent transparent rgba(0, 0, 0, 0.8)
+        rgba(0, 0, 0, 0.8);
     }
   }
 `

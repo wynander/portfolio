@@ -78,7 +78,10 @@ export const SocialContainer = styled.div`
 
 export const LinkList = styled.ul`
   border-top: 2px solid
-    ${(props) => (props.theme.colors.text === '#fff' ? 'rgba(255,255,255,.1)' : 'rgba(0,0,0,.1)')};
+    ${(props) =>
+      props.theme.colors.text === '#fff'
+        ? 'rgba(255,255,255,.1)'
+        : 'rgba(0,0,0,.1)'};
   display: flex;
   grid-template-columns: repeat(3, minmax(85px, 220px));
   gap: 40px;
