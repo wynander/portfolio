@@ -41,9 +41,14 @@ export function ItemBlogCard({ i, setOpen, item, index, setIndex }) {
 
       <UtilityList>
         <Tooltip>
-          <ExternalLinks href={item.source}>
+          <ExternalLinks href={item.source === 'private' ? '' : item.source} >
             <VscSourceControl size="2rem" />
           </ExternalLinks>
+          <TooltipBox>
+            {item.source === 'private'
+              ? 'Private Source Code'
+              : 'View Source Code'}
+          </TooltipBox>
           <TooltipBox>View Source Code</TooltipBox>
         </Tooltip>
         <Tooltip>

@@ -32,10 +32,10 @@ function ModalCard({ item, open, setOpen, index, setIndex }) {
       <Legend>{item.assets[index].description}</Legend>
       <UtilityList>
         <Tooltip>
-          <ExternalLinks href={item.source}>
+          <ExternalLinks href={item.source === 'private' ? '' : item.source}>
             <VscSourceControl size="2rem" />
           </ExternalLinks>
-          <TooltipBox>View Source Code</TooltipBox>
+          <TooltipBox>{item.source === 'private' ? 'Private Source Code' : 'View Source Code'}</TooltipBox>
         </Tooltip>
         <Tooltip>
           {item.type === 'webapp' ? (
