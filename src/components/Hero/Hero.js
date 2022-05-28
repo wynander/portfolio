@@ -1,5 +1,5 @@
 import React from 'react'
-import BgAnimation from '/src/components/BackgrooundAnimation/BackgroundAnimation'
+import BgAnimation from '/src/components/BackgroundAnimation/BackgroundAnimation'
 import { Section, SectionText, SectionTitle, HeroSection } from '../../styles/GlobalComponents'
 import { LeftSection, ButtonDiv,ButtonLink } from './HeroStyles'
 

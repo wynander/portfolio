@@ -9,33 +9,55 @@ import {
   Tag,
   TagList,
   TitleContent,
-  UtilityList
+  UtilityList,
+  Tooltip,
+  TooltipBox,
 } from './ProjectsStyles'
-
+import { VscSourceControl } from 'react-icons/vsc'
+import { MdWeb } from 'react-icons/md'
 export function ItemBlogCard({ i, setOpen, item, index, setIndex }) {
   return (
     <BlogCard key={i}>
-      <CarouselContainer assets={item.assets} setOpen={setOpen} index={index} setIndex={setIndex} height='300px'/>
       <TitleContent>
-        <HeaderThree title='true'>{item.title}</HeaderThree>
-        <Hr />
+        <HeaderThree title='true'>{item.title}</HeaderThree>{' '}
       </TitleContent>
-      <CardInfo className='card-info'>{item.description}</CardInfo>
-      <div>
-        <TitleContent>Stack</TitleContent>
+
+      <CarouselContainer
+        assets={item.assets}
+        setOpen={setOpen}
+        index={index}
+        setIndex={setIndex}
+        height='300px'
+      />
+      <TitleContent>
+        <HeaderThree>{item.subtitle}</HeaderThree>
         <TagList>
           {item.tags.map((t, i) => {
-            return <Tag key={i}>{t}</Tag>
+            return <Tag key={i}>{t.toUpperCase()}</Tag>
           })}
         </TagList>
-      </div>
+      </TitleContent>
+      <CardInfo className='card-info'>{item.description}</CardInfo>
+      
       <UtilityList>
-        <ExternalLinks href={item.source}>Source Code</ExternalLinks>
-        {item.type === 'webapp' ? (
-          <ExternalLinks href={item.visit}>View Site</ExternalLinks>
-        ) : (
-          <ExternalLinks href={item.visit}>View More</ExternalLinks>
-        )}
+        <Tooltip>
+          <ExternalLinks href={item.source}>
+            <VscSourceControl size='2rem' />
+          </ExternalLinks>
+          <TooltipBox>View Source Code</TooltipBox>
+        </Tooltip>
+        <Tooltip>
+          {item.type === 'webapp' ? (
+            <>
+              <ExternalLinks href={item.visit}>
+                <MdWeb size='2rem' />
+              </ExternalLinks>
+              <TooltipBox>Visit Site</TooltipBox>
+            </>
+          ) : (
+            <ExternalLinks href={item.visit}>View More</ExternalLinks>
+          )}
+        </Tooltip>
       </UtilityList>
     </BlogCard>
   )

@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import ClientOnlyPortal from './ClientOnlyPortal'
 import { IoClose } from 'react-icons/io5'
+import { useThemeContext } from 'src/styles/theme'
 
 export default function Modal({ key, open, setOpen, children }) {
+  const { theme } = useThemeContext()
+  console.log(theme)
   return (
     <>
       {open && (
@@ -18,15 +21,20 @@ export default function Modal({ key, open, setOpen, children }) {
             <style jsx>{`
               .backdrop {
                 position: fixed;
-                background-color: rgba(0, 0, 0, 0.5);
+                background-color: transparent;
                 top: 0;
                 right: 0;
                 bottom: 0;
                 left: 0;
                 z-index: 1040;
+                display: flex;
+                justify-content: center;
+                align-items: center;
               }
+
               .backdrop-exit {
                 position: absolute;
+                background-color: ${theme ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0.3)'};
                 top: 0;
                 right: 0;
                 bottom: 0;
@@ -35,15 +43,13 @@ export default function Modal({ key, open, setOpen, children }) {
               }
 
               .modal {
-                background-color: #202020;
+                background-color: ${theme ? '#fff' : '#202020'};
                 position: absolute;
-                top: 10%;
-                right: 10%;
-                bottom: 10%;
-                left: 10%;
+                width: 70vw;
                 padding: 1em;
                 border-radius: 0.5em;
                 z-index: 1050;
+                height: auto;
               }
 
               .close-button {
@@ -51,9 +57,9 @@ export default function Modal({ key, open, setOpen, children }) {
                 top: 0;
                 right: 0;
                 padding: 0.5em;
-                background-color: #202020;
+                background-color: ${theme ? '#fff' : '#202020'};
                 border: none;
-                color: #fff;
+                color: ${theme ? '#121212' : '#fff'};
                 z-index: 1041;
                 height: 2em;
                 width: 3em;

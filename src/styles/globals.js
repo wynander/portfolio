@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import { normalize } from 'styled-normalize';
+import { createGlobalStyle } from 'styled-components'
+import { normalize } from 'styled-normalize'
 
 const GlobalStyles = createGlobalStyle`
   ${normalize};
@@ -15,15 +15,15 @@ const GlobalStyles = createGlobalStyle`
 
   }
   body {
-    font-family: ${props => props.theme.fonts.main};
+    font-family: ${(props) => props.theme.fonts.main};
     font-size: 1.6rem;
-    background: ${props => props.theme.colors.background1};
-    color: ${props => props.theme.colors.primary1};
+    background: ${(props) => props.theme.colors.background1};
+    color: ${(props) => props.theme.colors.primary1};
     cursor: default;
     overflow-x: hidden;
   }
   h1,h2,h3,h4,h5,h6,button {
-    font-family: ${props => props.theme.fonts.title};
+    font-family: ${(props) => props.theme.fonts.title};
   }
   a {
     text-decoration: none;
@@ -31,7 +31,43 @@ const GlobalStyles = createGlobalStyle`
   li{
     list-style: none;
   }
+  #path_0-{
+    stroke-dashoffset: -1200;
+    stroke-dasharray: 1200;
+  animation: dash 4s ease-out forwards;
+  animation-delay: .2s;
+  
+}
 
-`;
+  @keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}#path_1-{
+    stroke-dashoffset: 1200;
+    stroke-dasharray: 1200;
+  animation: dash 3.25s ease-out forwards;
+  animation-delay: .2s;
+  }
+  @keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
-export default GlobalStyles;
+.arrow-container{
+  padding: .5rem;
+  background: rgba(0,0,0,.5);
+  opacity: .75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50vw;
+}
+button:hover .arrow-container{
+    background: rgba(0,0,0,1);
+    opacity: 1;
+}
+`
+
+export default GlobalStyles

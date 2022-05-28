@@ -5,7 +5,7 @@ import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs'
 import { Img } from './ProjectsStyles'
 import useWindowDimensions from './useWindowDimensions'
 
-function CarouselContainer({ legend,assets, setOpen, index, setIndex, height,open }) {
+function CarouselContainer({ legend, assets, setOpen, index, setIndex, height, open }) {
   const arrowStyles = {
     position: 'absolute',
     display: 'flex',
@@ -14,8 +14,8 @@ function CarouselContainer({ legend,assets, setOpen, index, setIndex, height,ope
     zIndex: 2,
     top: 0,
     border: 'none',
-    background: 'rgba(0,0,0, 0.2)',
-    width: 30,
+    background: 'rgba(0,0,0, 0)',
+    width: '8%',
     fill: '#fff',
     color: '#fff',
     height: '100%',
@@ -34,9 +34,9 @@ function CarouselContainer({ legend,assets, setOpen, index, setIndex, height,ope
     fontFamily: 'Space Grotesk, sans-serif',
   }
   const dims = useWindowDimensions()
-  
+
   useEffect(() => {
-    if(dims.width <= 960 && open){
+    if (dims.width <= 960 && open) {
       setOpen(false)
     }
   }, [dims, open, setOpen])
@@ -63,7 +63,9 @@ function CarouselContainer({ legend,assets, setOpen, index, setIndex, height,ope
               title={label}
               style={{ ...arrowStyles, left: 0 }}
             >
-              <BsFillCaretLeftFill />
+              <div className='arrow-container'>
+                <BsFillCaretLeftFill size='24px' />
+              </div>
             </button>
           )
         }
@@ -75,7 +77,9 @@ function CarouselContainer({ legend,assets, setOpen, index, setIndex, height,ope
               title={label}
               style={{ ...arrowStyles, right: 0 }}
             >
-              <BsFillCaretRightFill />
+              <div className='arrow-container'>
+                <BsFillCaretRightFill size='24px' />
+              </div>
             </button>
           )
         }
@@ -83,11 +87,13 @@ function CarouselContainer({ legend,assets, setOpen, index, setIndex, height,ope
         {assets?.map((a, i) => {
           return (
             <div key={i}>
-              <Img src={a.source} height={height} />
+              <Img src={a.source} height={height} alt={a.description} />
 
-             {legend && <p className='legend' style={{ ...legendStyles }}>
-                {a.description}
-              </p>}
+              {legend && (
+                <p className='legend' style={{ ...legendStyles }}>
+                  {a.description}
+                </p>
+              )}
             </div>
           )
         })}

@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.path{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    animation: dash 2s ease-in-out infinite;
+}

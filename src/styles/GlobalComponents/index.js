@@ -57,10 +57,7 @@ export const SectionTitle = styled.h2`
   width: max-content;
   max-width: 100%;
   height: max-content;
-
-  background: linear-gradient(121.57deg, #ffffff 18.77%, rgba(255, 255, 255, 1) 60.15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: ${(props) => props.theme.colors.text};
   margin-bottom: 10px;
   padding: ${(props) => (props.main ? '20px 0 16px' : '0')};
 
@@ -88,7 +85,7 @@ export const SectionText = styled.p`
   line-height: 40px;
   font-weight: 300;
   padding-bottom: 3.6rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: ${props => props.theme.colors.text};
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 670px;

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const LeftSection = styled.div`
   max-width: 55%;
-
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -10,19 +9,22 @@ export const LeftSection = styled.div`
   height: min-content;
   justify-content: center;
   z-index: 1;
+
   @media ${(props) => {
       props.theme.breakpoints.sm
     }} {
     width: 80%;
     display: flex;
     flex-direction: column;
-
     margin: 0 auto;
+    margin-top: 2rem;
   }
+
   @media screen and (max-width: 960px) {
     max-width: 100%;
     margin: 0 auto;
   }
+  
   @media ${(props) => props.theme.breakpoints.md} {
     position: relative;
     max-width: 100%;
@@ -38,7 +40,7 @@ export const RightSection = styled.div`
   margin-botton: 2rem;
   position: absolute;
   left: 400px;
-  
+
   @media ${(props) => props.theme.breakpoints.md} {
     position: relative;
     left: 0;
