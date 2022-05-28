@@ -63,7 +63,7 @@ export const projects = [
   {
     title: 'Portfolio',
     subtitle: 'Modern SSR Portfolio',
-    description: '',
+    description: 'This portfolio site was built using Next.js and Styled Components to showcase my work. Click view more to return to the top.',
     image: '/images/3.jpg',
     tags: ['React', 'Next.js', 'Styled Components'],
     source: 'https://google.com',
