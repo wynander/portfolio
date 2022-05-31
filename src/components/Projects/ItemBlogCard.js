@@ -41,7 +41,10 @@ const ItemBlogCard = ({ i, setOpen, item, index, setIndex }) => (
 
     <UtilityList>
       <Tooltip>
-        <ExternalLinks href={item.source === 'private' ? '' : item.source}>
+        <ExternalLinks
+          target="_blank"
+          href={item.source === 'private' ? '' : item.source}
+        >
           <VscSourceControl size="2rem" />
         </ExternalLinks>
         <TooltipBox>
@@ -54,13 +57,15 @@ const ItemBlogCard = ({ i, setOpen, item, index, setIndex }) => (
       <Tooltip>
         {item.type === 'webapp' ? (
           <>
-            <ExternalLinks href={item.visit}>
+            <ExternalLinks target="_blank" href={item.visit}>
               <MdWeb size="2rem" />
             </ExternalLinks>
             <TooltipBox>Visit Site</TooltipBox>
           </>
         ) : (
-          <ExternalLinks href={item.visit}>View More</ExternalLinks>
+          <ExternalLinks target="_blank" href={item.visit}>
+            View More
+          </ExternalLinks>
         )}
       </Tooltip>
     </UtilityList>

@@ -3,7 +3,7 @@ export const projects = [
     title: 'Homebase',
     subtitle: 'Real Estate Trend Visualizer',
     description:
-      "Kepler.gl inspired web-app used to visualize housing trends. Employs GIS principles to join geospatial census data with housing trends characterized by Zillow's published economic data. Allows real estate investors to find potential markets using interactive data filtering. ",
+      "React web-app used to visualize housing trends. Employs GIS principles to join geospatial census data with housing trends characterized by Zillow's published economic data. Allows real estate investors to find potential markets using interactive data filtering. Offloads rendering to the GPU for better performance when visualizing large datasets. Without hardware acceleration, or with too low of system specs, the framerate of the app will drop drastically.",
     tags: ['React', 'JavaScript', 'DeckGL', 'CSS'],
     source: 'https://github.com/wynander/homebase',
     visit: 'https://mm2022-858dd.web.app/',
@@ -12,16 +12,18 @@ export const projects = [
     assets: [
       {
         source: '/homebase/HOMEBASE_BoundaryCAZoomed.png',
-        description: 'View detailed city boundaries across the country',
+        description:
+          'Custom data fetching hooks pull census data of city boundaries so the user can view detailed city outlines across the country. If all states are added the number of vertices shown is >1 million (~22,000 cities). ',
       },
       {
         source: '/homebase/HOMEBASE_Hex.png',
         description:
-          'Hexagonal grid showing average house prices and housing appreciation  trends',
+          'Trend algorithms determine appreciation rate and average price of homes in a given city. The hexagon layer is used to visualize the trends in a more performant and generalized way than the detailed city layer.',
       },
       {
         source: '/homebase/HOMEBASE_HexFilter.png',
-        description: 'Filter the data for whats important to you',
+        description:
+          'Responsive filtering ranges allow the user to filter both layers by price and appreciation rate. ',
       },
     ],
     learnings: [],
@@ -30,8 +32,8 @@ export const projects = [
     title: 'Spark',
     subtitle: 'Financial Modelling Tool',
     description:
-      "A portfolio planning tool that creates financial models based on user's income, savings habits, investments, and ideal retirement scenario. Capable of modelling the effects of thousands of assets simultaneously while still remaining responsive.  ",
-    tags: ['React', 'JavaScript', 'Firebase'],
+      "A portfolio planning tool that creates financial models based on user's income, savings habits, investments, and ideal retirement scenario. Capable of modelling the effects of thousands of assets simultaneously while remaining responsive. Utilizes Formik and Yup to validate user input and create a clean, intuitive UI. ",
+    tags: ['React', 'JavaScript', 'Firebase','Chart.js'],
 
     source: 'https://github.com/wynander/spark',
     visit: 'https://spark-e53fb.web.app/',
@@ -40,17 +42,18 @@ export const projects = [
     assets: [
       {
         source: '/spark/spark-home.png',
-        description: 'Home page',
+        description:
+          'Home page with navbar. Easy login with Google using the user-icon in the top right.',
       },
       {
         source: '/spark/spark-plot.png',
         description:
-          'Responsive dashboard with stateful inputs that are used to generate a forward-looking financial model',
+          'Responsive dashboard with controlled inputs that are used to generate a forward-looking financial model. Allows users to adjust some advanced parameters such as average return %, yearly inflation %, and yearly raise %.',
       },
       {
         source: '/spark/spark-assets.png',
         description:
-          'Assset management module where asset characteristics can be reviewed, updated, or deleted.',
+          'Management module where an asset can be reviewed, updated, or deleted.',
       },
       {
         source: '/spark/spark-db.png',
