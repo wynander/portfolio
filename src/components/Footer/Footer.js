@@ -13,28 +13,29 @@ import {
   SocialIconsContainer,
 } from './FooterStyles'
 
-const Footer = () => {
-  return (
-    <FooterWrapper>
-      <LinkList>
-        <LinkColumn>
-          <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:wynanderson77@gmail.com">
-            wynanderson77@gmail.com
-          </LinkItem>
-        </LinkColumn>
+const Footer = () => (
+  <FooterWrapper>
+    <LinkList>
+      <LinkColumn>
+        <LinkTitle>Email</LinkTitle>
+        <LinkItem href="mailto:wynanderson77@gmail.com">
+          wynanderson77@gmail.com
+        </LinkItem>
+      </LinkColumn>
 
-        <SocialContainer>
-          <SocialIcons href="https://github.com/wynander">
-            <AiFillGithub size="3rem" />
-          </SocialIcons>
-          <SocialIcons href="https://www.linkedin.com/in/wyn-anderson/">
-            <AiFillLinkedin size="3rem" />
-          </SocialIcons>
-        </SocialContainer>
-      </LinkList>
-    </FooterWrapper>
-  )
-}
+      <SocialContainer>
+        <SocialIcons target="_blank" href="https://github.com/wynander">
+          <AiFillGithub size="3rem" />
+        </SocialIcons>
+        <SocialIcons
+          target="_blank"
+          href="https://www.linkedin.com/in/wyn-anderson/"
+        >
+          <AiFillLinkedin size="3rem" />
+        </SocialIcons>
+      </SocialContainer>
+    </LinkList>
+  </FooterWrapper>
+)
 
 export default Footer

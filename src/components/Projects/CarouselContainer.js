@@ -56,57 +56,55 @@ function CarouselContainer({
   }
 
   return (
-    <>
-      <Carousel
-        selectedItem={index}
-        onClickItem={(i, item) => handleClickItem(i, item)}
-        onChange={(i) => setIndex(i)}
-        showThumbs={false}
-        showStatus={false}
-        renderArrowPrev={(onClickHandler, hasPrev, label) =>
-          hasPrev && (
-            <button
-              type="button"
-              onClick={onClickHandler}
-              title={label}
-              style={{ ...arrowStyles, left: 0 }}
-            >
-              <div className="arrow-container">
-                <BsFillCaretLeftFill size="24px" />
-              </div>
-            </button>
-          )
-        }
-        renderArrowNext={(onClickHandler, hasNext, label) =>
-          hasNext && (
-            <button
-              type="button"
-              onClick={onClickHandler}
-              title={label}
-              style={{ ...arrowStyles, right: 0 }}
-            >
-              <div className="arrow-container">
-                <BsFillCaretRightFill size="24px" />
-              </div>
-            </button>
-          )
-        }
-      >
-        {assets?.map((a, i) => {
-          return (
-            <div key={i}>
-              <Img src={a.source} height={height} alt={a.description} />
-
-              {legend && (
-                <p className="legend" style={{ ...legendStyles }}>
-                  {a.description}
-                </p>
-              )}
+    <Carousel
+      selectedItem={index}
+      onClickItem={(i, item) => handleClickItem(i, item)}
+      onChange={(i) => setIndex(i)}
+      showThumbs={false}
+      showStatus={false}
+      renderArrowPrev={(onClickHandler, hasPrev, label) =>
+        hasPrev && (
+          <button
+            type="button"
+            onClick={onClickHandler}
+            title={label}
+            style={{ ...arrowStyles, left: 0 }}
+          >
+            <div className="arrow-container">
+              <BsFillCaretLeftFill size="24px" />
             </div>
-          )
-        })}
-      </Carousel>
-    </>
+          </button>
+        )
+      }
+      renderArrowNext={(onClickHandler, hasNext, label) =>
+        hasNext && (
+          <button
+            type="button"
+            onClick={onClickHandler}
+            title={label}
+            style={{ ...arrowStyles, right: 0 }}
+          >
+            <div className="arrow-container">
+              <BsFillCaretRightFill size="24px" />
+            </div>
+          </button>
+        )
+      }
+    >
+      {assets?.map((a, i) => {
+        return (
+          <div key={i}>
+            <Img src={a.source} height={height} alt={a.description} />
+
+            {legend && (
+              <p className="legend" style={{ ...legendStyles }}>
+                {a.description}
+              </p>
+            )}
+          </div>
+        )
+      })}
+    </Carousel>
   )
 }
 

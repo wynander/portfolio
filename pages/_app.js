@@ -1,6 +1,6 @@
 import Theme from '../src/styles/theme.js'
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <>
       <Theme>
@@ -9,3 +9,5 @@ export default function App({ Component, pageProps }) {
     </>
   )
 }
+
+export default App

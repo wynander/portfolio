@@ -68,10 +68,13 @@ const Header = () => {
         </li>
       </Div2>
       <Div3>
-        <SocialIcons href="https://github.com/wynander">
+        <SocialIcons target="_blank" href="https://github.com/wynander">
           <AiFillGithub size="3rem" />
         </SocialIcons>
-        <SocialIcons href="https://www.linkedin.com/in/wyn-anderson/">
+        <SocialIcons
+          target="_blank"
+          href="https://www.linkedin.com/in/wyn-anderson/"
+        >
           <AiFillLinkedin size="3rem" />
         </SocialIcons>
         <Tooltip>

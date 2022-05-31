@@ -60,35 +60,27 @@ export const projects = [
     ],
     learnings: [],
   },
-  {
-    title: 'Portfolio',
-    subtitle: 'Modern SSR Portfolio',
-    description:
-      'This portfolio site was built using Next.js and Styled Components to showcase my work. Click view more to return to the top.',
-    image: '/images/3.jpg',
-    tags: ['React', 'Next.js', 'Styled Components'],
-    source: 'https://github.com/wynander/portfolio',
-    visit: '/',
-    id: 2,
-    type: 'matlab',
-    assets: [
-      {
-        source: '/portfolio/portfolio-dark.png',
-        description: 'Dark Mode Theme',
-      },
-      {
-        source: '/portfolio/portfolio-light.png',
-        description: 'Light Mode Theme',
-      },
-    ],
-    learnings: [],
-  },
-]
-
-export const TimeLineData = [
-  { year: 2017, text: 'Started my journey' },
-  { year: 2018, text: 'Worked as a freelance developer' },
-  { year: 2019, text: 'Founded JavaScript Mastery' },
-  { year: 2020, text: 'Shared my projects with the world' },
-  { year: 2021, text: 'Started my own platform' },
+  // {
+  //   title: 'Portfolio',
+  //   subtitle: 'Modern SSR Portfolio',
+  //   description:
+  //     'This portfolio site was built using Next.js and Styled Components to showcase my work. Click view more to return to the top.',
+  //   image: '/images/3.jpg',
+  //   tags: ['React', 'Next.js', 'Styled Components'],
+  //   source: 'https://github.com/wynander/portfolio',
+  //   visit: '/',
+  //   id: 2,
+  //   type: 'matlab',
+  //   assets: [
+  //     {
+  //       source: '/portfolio/portfolio-dark.png',
+  //       description: 'Dark Mode Theme',
+  //     },
+  //     {
+  //       source: '/portfolio/portfolio-light.png',
+  //       description: 'Light Mode Theme',
+  //     },
+  //   ],
+  //   learnings: [],
+  // },
 ]

@@ -3,6 +3,7 @@ import { RightSection } from '../Hero/HeroStyles'
 import { useThemeContext } from 'src/styles/theme'
 const BackgroundAnimation = () => {
   const { theme } = useThemeContext()
+
   useEffect(() => {
     let lowerSVG = document.getElementById('path_0-')
     let lowerClone = lowerSVG.cloneNode(true)
@@ -11,6 +12,7 @@ const BackgroundAnimation = () => {
     let upperClone = upperSVG.cloneNode(true)
     upperSVG.parentNode.replaceChild(upperClone, upperSVG)
   }, [theme])
+
   return (
     <RightSection hideSmall>
       <svg
@@ -73,4 +75,5 @@ const BackgroundAnimation = () => {
     </RightSection>
   )
 }
+
 export default BackgroundAnimation

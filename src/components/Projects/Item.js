@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ItemBlogCard } from './ItemBlogCard'
+import ItemBlogCard from './ItemBlogCard'
 import Modal from './Modal'
 import ModalCard from './ModalCard'
 export default function Item({ item }) {

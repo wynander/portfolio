@@ -6,7 +6,7 @@ import {
   SectionDivider,
   SectionText,
   SectionTitle,
-} from '../../styles/GlobalComponents'
+} from '../../styles'
 import {
   Icon,
   List,
@@ -16,6 +16,7 @@ import {
   ListTitle,
 } from './TechnologiesStyles'
 import { SiFigma } from 'react-icons/si'
+
 const Technologies = () => {
   const { theme } = useThemeContext()
   return (
@@ -35,8 +36,7 @@ const Technologies = () => {
               Next.js
               <br />
               JavaScript
-              <br />
-              Styled Components
+              
               <br />
               HTML 5
               <br />
@@ -50,7 +50,9 @@ const Technologies = () => {
             <ListParagraph>
               Node <br />
               Express <br />
-              Firebase / NoSQL <br />
+              Firebase
+              <br />
+              NoSQL <br />
             </ListParagraph>
           </ListContainer>
         </ListItem>

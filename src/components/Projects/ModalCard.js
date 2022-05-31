@@ -18,40 +18,42 @@ import {
 import { VscSourceControl } from 'react-icons/vsc'
 import { MdWeb } from 'react-icons/md'
 
-function ModalCard({ item, open, setOpen, index, setIndex }) {
-  return (
-    <>
-      <CarouselContainer
-        assets={item.assets}
-        open={open}
-        setOpen={setOpen}
-        index={index}
-        setIndex={setIndex}
-        height="auto"
-      />
-      <Legend>{item.assets[index].description}</Legend>
-      <UtilityList>
-        <Tooltip>
-          <ExternalLinks href={item.source === 'private' ? '' : item.source}>
-            <VscSourceControl size="2rem" />
-          </ExternalLinks>
-          <TooltipBox>{item.source === 'private' ? 'Private Source Code' : 'View Source Code'}</TooltipBox>
-        </Tooltip>
-        <Tooltip>
-          {item.type === 'webapp' ? (
-            <>
-              <ExternalLinks href={item.visit}>
-                <MdWeb size="2rem" />
-              </ExternalLinks>
-              <TooltipBox>Visit Site</TooltipBox>
-            </>
-          ) : (
-            <ExternalLinks href={item.visit}>View More</ExternalLinks>
-          )}
-        </Tooltip>
-      </UtilityList>
-    </>
-  )
-}
+const ModalCard = ({ item, open, setOpen, index, setIndex }) => (
+  <>
+    <CarouselContainer
+      assets={item.assets}
+      open={open}
+      setOpen={setOpen}
+      index={index}
+      setIndex={setIndex}
+      height="auto"
+    />
+    <Legend>{item.assets[index].description}</Legend>
+    <UtilityList>
+      <Tooltip>
+        <ExternalLinks href={item.source === 'private' ? '' : item.source}>
+          <VscSourceControl size="2rem" />
+        </ExternalLinks>
+        <TooltipBox>
+          {item.source === 'private'
+            ? 'Private Source Code'
+            : 'View Source Code'}
+        </TooltipBox>
+      </Tooltip>
+      <Tooltip>
+        {item.type === 'webapp' ? (
+          <>
+            <ExternalLinks href={item.visit}>
+              <MdWeb size="2rem" />
+            </ExternalLinks>
+            <TooltipBox>Visit Site</TooltipBox>
+          </>
+        ) : (
+          <ExternalLinks href={item.visit}>View More</ExternalLinks>
+        )}
+      </Tooltip>
+    </UtilityList>
+  </>
+)
 
 export default ModalCard
