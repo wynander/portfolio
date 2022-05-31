@@ -33,7 +33,7 @@ export const projects = [
     subtitle: 'Financial Modelling Tool',
     description:
       "A portfolio planning tool that creates financial models based on user's income, savings habits, investments, and ideal retirement scenario. Capable of modelling the effects of thousands of assets simultaneously while remaining responsive. Utilizes Formik and Yup to validate user input and create a clean, intuitive UI. ",
-    tags: ['React', 'JavaScript', 'Firebase','Chart.js'],
+    tags: ['React', 'JavaScript', 'Firebase','CRUD'],
 
     source: 'https://github.com/wynander/spark',
     visit: 'https://spark-e53fb.web.app/',
