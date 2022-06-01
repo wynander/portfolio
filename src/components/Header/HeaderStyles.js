@@ -8,7 +8,7 @@ export const Container = styled.div`
   grid-column-gap: 2rem;
   padding: 1rem;
   padding-top: 1rem;
-  position: sticky;
+  width: 100%;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
@@ -142,7 +142,7 @@ export const Logo = styled.a`
   cursor: pointer;
 `
 
-export const SocialIcons = styled.a`
+export const NavIcons = styled.a`
   transition: 0.4s ease;
   color: ${(props) => props.theme.colors.text};
   opacity: 0.6;

@@ -36,7 +36,6 @@ const Technologies = () => {
               Next.js
               <br />
               JavaScript
-              
               <br />
               HTML 5
               <br />

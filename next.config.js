@@ -5,7 +5,6 @@ const nextConfig = {
     styledComponents: true,
   },
   webpack: (config, options) => {
- 
     config.module.rules.push({
       test: /\.pdf$/,
       use: [
@@ -13,14 +12,14 @@ const nextConfig = {
           loader: 'file-loader',
           options: {
             name: '[path][name].[ext]',
-            outputPath: '/public'
-          }
-        } 
-      ]
+            outputPath: '/public',
+          },
+        },
+      ],
     })
- 
-    return config;
-  }
+
+    return config
+  },
 }
 
 module.exports = nextConfig

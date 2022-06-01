@@ -31,7 +31,10 @@ const ModalCard = ({ item, open, setOpen, index, setIndex }) => (
     <Legend>{item.assets[index].description}</Legend>
     <UtilityList>
       <Tooltip>
-        <ExternalLinks target="_blank" href={item.source === 'private' ? '' : item.source}>
+        <ExternalLinks
+          target="_blank"
+          href={item.source === 'private' ? '' : item.source}
+        >
           <VscSourceControl size="2rem" />
         </ExternalLinks>
         <TooltipBox>

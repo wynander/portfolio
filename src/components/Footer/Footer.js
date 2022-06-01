@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
 
-import { SocialIcons } from '../Header/HeaderStyles'
+import { NavIcons } from '../Header/HeaderStyles'
 import {
   CompanyContainer,
   FooterWrapper,
@@ -24,15 +24,15 @@ const Footer = () => (
       </LinkColumn>
 
       <SocialContainer>
-        <SocialIcons target="_blank" href="https://github.com/wynander">
+        <NavIcons target="_blank" href="https://github.com/wynander">
           <AiFillGithub size="3rem" />
-        </SocialIcons>
-        <SocialIcons
+        </NavIcons>
+        <NavIcons
           target="_blank"
           href="https://www.linkedin.com/in/wyn-anderson/"
         >
           <AiFillLinkedin size="3rem" />
-        </SocialIcons>
+        </NavIcons>
       </SocialContainer>
     </LinkList>
   </FooterWrapper>

@@ -4,7 +4,6 @@ import { Section, SectionText, SectionTitle, HeroSection } from '../../styles'
 import { LeftSection, ButtonDiv, ButtonLink } from './HeroStyles'
 import Link from 'next/link'
 
-
 const Hero = (props) => (
   <HeroSection row nopadding>
     <LeftSection>
@@ -17,11 +16,8 @@ const Hero = (props) => (
         applications.
       </SectionText>
       <ButtonDiv>
-
-        <Link href='/resume'>
-          <ButtonLink>
-            Resume
-          </ButtonLink>
+        <Link href="/resume">
+          <ButtonLink>Resume</ButtonLink>
         </Link>
         <ButtonLink target="_blank" href="https://github.com/wynander">
           GitHub

@@ -11,11 +11,10 @@ export default function PDFViewer() {
   return (
     <div className="pdf-container">
       <iframe
-        className='pdf-viewer'
-        src='/resume.pdf'
+        className="pdf-viewer"
+        src="/resume.pdf"
         height="100%"
         width="100%"
-
       />
     </div>
   )

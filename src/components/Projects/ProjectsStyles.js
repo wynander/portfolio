@@ -61,24 +61,6 @@ export const HeaderThree = styled.h3`
   font-size: ${(props) => (props.title ? '3rem' : '2rem')};
 `
 
-export const Hr = styled.hr`
-  width: 300px;
-  height: 3px;
-  margin: 0px auto 10px auto;
-  border: 0;
-  background: ;
-`
-
-export const Intro = styled.div`
-  width: 170px;
-  margin: 0 auto;
-  color: #dce3e7;
-  font-family: 'Droid Serif', serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 18px;
-`
-
 export const CardInfo = styled.p`
   width: 100%;
   padding: 0 50px;

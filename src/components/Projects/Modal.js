@@ -3,7 +3,7 @@ import ClientOnlyPortal from './ClientOnlyPortal'
 import { IoClose } from 'react-icons/io5'
 import { useThemeContext } from 'src/styles/theme'
 
-const Modal=({ key, open, setOpen, children }) =>{
+const Modal = ({ key, open, setOpen, children }) => {
   const { theme } = useThemeContext()
   return (
     <>

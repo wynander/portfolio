@@ -33,6 +33,7 @@ export const LeftSection = styled.div`
     flex-direction: column;
     display: ${(props) => (props.hideSmall ? 'none' : '')};
     margin: 0 auto;
+    margin-top: 2rem;
   }
 `
 export const RightSection = styled.div`

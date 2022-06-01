@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HeroSection = styled.section`
   display: flex;
   padding: ${(props) => (props.nopadding ? '32px' : '32px 48px 16px 48px')};
-  height: calc(100vh - 76px);
+  height: calc(100vh);
   margin: 0 auto;
   max-width: 1200px;
   box-sizing: border-box;
@@ -13,6 +13,7 @@ export const HeroSection = styled.section`
 
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 24px 48px 0;
+    margin-top: ;
     flex-direction: column;
     height: auto;
   }

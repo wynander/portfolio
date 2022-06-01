@@ -33,7 +33,7 @@ export const projects = [
     subtitle: 'Financial Modelling Tool',
     description:
       "A portfolio planning tool that creates financial models based on user's income, savings habits, investments, and ideal retirement scenario. Capable of modelling the effects of thousands of assets simultaneously while remaining responsive. Utilizes Formik and Yup to validate user input and create a clean, intuitive UI. ",
-    tags: ['React', 'JavaScript', 'Firebase','CRUD'],
+    tags: ['React', 'JavaScript', 'Firebase', 'CRUD'],
 
     source: 'https://github.com/wynander/spark',
     visit: 'https://spark-e53fb.web.app/',
@@ -63,27 +63,27 @@ export const projects = [
     ],
     learnings: [],
   },
-  // {
-  //   title: 'Portfolio',
-  //   subtitle: 'Modern SSR Portfolio',
-  //   description:
-  //     'This portfolio site was built using Next.js and Styled Components to showcase my work. Click view more to return to the top.',
-  //   image: '/images/3.jpg',
-  //   tags: ['React', 'Next.js', 'Styled Components'],
-  //   source: 'https://github.com/wynander/portfolio',
-  //   visit: '/',
-  //   id: 2,
-  //   type: 'matlab',
-  //   assets: [
-  //     {
-  //       source: '/portfolio/portfolio-dark.png',
-  //       description: 'Dark Mode Theme',
-  //     },
-  //     {
-  //       source: '/portfolio/portfolio-light.png',
-  //       description: 'Light Mode Theme',
-  //     },
-  //   ],
-  //   learnings: [],
-  // },
+  {
+    title: 'Portfolio',
+    subtitle: 'Modern SSR Portfolio',
+    description:
+      'Minimal and clean hosted portfolio website that utilizes SSR for improved loading and SEO. Click view more to return to the top.',
+    image: '/images/3.jpg',
+    tags: ['React', 'Next.js', 'Styled Components'],
+    source: 'https://github.com/wynander/portfolio',
+    visit: '/',
+    id: 2,
+    type: 'portfolio',
+    assets: [
+      {
+        source: '/portfolio/portfolio-dark.png',
+        description: 'Dark Mode Theme',
+      },
+      {
+        source: '/portfolio/portfolio-light.png',
+        description: 'Light Mode Theme',
+      },
+    ],
+    learnings: [],
+  },
 ]
