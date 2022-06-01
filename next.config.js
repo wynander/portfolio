@@ -4,6 +4,23 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  webpack: (config, options) => {
+ 
+    config.module.rules.push({
+      test: /\.pdf$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+            outputPath: '/public'
+          }
+        } 
+      ]
+    })
+ 
+    return config;
+  }
 }
 
 module.exports = nextConfig

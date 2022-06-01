@@ -52,17 +52,17 @@ const Header = () => {
       </Div1>
       <Div2>
         <li className="scale">
-          <Link href="#experience">
+          <Link href="/#experience">
             <NavLink>Experience</NavLink>
           </Link>
         </li>
         <li className="scale">
-          <Link href="#tech">
+          <Link href="/#tech">
             <NavLink>Technologies</NavLink>
           </Link>
         </li>
         <li className="scale">
-          <Link href="#">
+          <Link href="/resume">
             <NavLink>Resume</NavLink>
           </Link>
         </li>

@@ -68,6 +68,21 @@ button:hover .arrow-container{
     background: rgba(0,0,0,1);
     opacity: 1;
 }
+
+.pdf-container{
+  width: 100%;
+  height: 1175px;
+  padding: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.pdf-viewer{
+  width: 80%;
+  height: 100%;
+  border-radius: .5rem;
+  box-shadow: 0 0 .5rem rgba(0,0,0,.5);
+}
 `
 
 export default GlobalStyles
