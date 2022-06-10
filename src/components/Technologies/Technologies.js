@@ -37,6 +37,10 @@ const Technologies = () => {
               <br />
               JavaScript
               <br />
+              Jest
+              <br />
+              Redux
+              <br />
               HTML 5
               <br />
               CSS 3
@@ -47,11 +51,16 @@ const Technologies = () => {
           <ListContainer>
             <ListTitle>Back-End</ListTitle>
             <ListParagraph>
-              Node <br />
-              Express <br />
+              Node
+              <br />
+              Express
+              <br />
               Firebase
               <br />
-              NoSQL <br />
+              Postman
+              <br />
+              NoSQL
+              <br />
             </ListParagraph>
           </ListContainer>
         </ListItem>
