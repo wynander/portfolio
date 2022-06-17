@@ -55,6 +55,10 @@ const Technologies = () => {
               <br />
               Express
               <br />
+              Django
+              <br />
+              Python
+              <br />
               Firebase
               <br />
               Postman
